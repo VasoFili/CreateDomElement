@@ -9,8 +9,8 @@
   }
 
   DomElement.prototype.createElement = function () {
-     let selectorMarker = this.selector.charAt(0);
-     let selectorText = this.selector.substring(1);
+     const selectorMarker = this.selector.charAt(0);
+     const selectorText = this.selector.substring(1);
      if (selectorMarker === '.') {
         const li = document.createElement('li');
         li.classList.add(selectorText);
@@ -34,6 +34,6 @@
      }
   }
 
-  let myDomElement = new DomElement('#block', '100px', '1000px', 'green', '32px');
+  const myDomElement = new DomElement('.block', '100px', '1000px', 'green', '32px');
 
   myDomElement.createElement();
